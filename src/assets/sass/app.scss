@@ -8,6 +8,9 @@
 //
 // Style guide: main
 
+// Utils (see: https://github.com/Blocklevel/vueture-blocklevel-sass-utils)
+@import "~vueture-blocklevel-sass-utils";
+
 
 // Config
 //
@@ -19,16 +22,6 @@
 @import "config/variables";
 @import "config/mixins";
 @import "config/functions";
-
-
-// Utils
-//
-// Require util styles here.
-//
-// Style guide: utils
-@import "utils/functions";
-@import "utils/mixins";
-@import "utils/extends";
 
 
 // Base
