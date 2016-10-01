@@ -1,0 +1,23 @@
+// font-face
+//
+// font-face helper. Be sure to have the following font files: eot, woff, ttf, svg. Font can be generated at https://www.fontsquirrel.com/tools/webfont-generator
+//
+// $font-name (String) - Name of the font
+// $folder-name (String) - Subfolder inside the fonts folder
+// $file-name (String) - Name of the font-file
+// $font-weight (String) = normal - Font weight value
+// $font-style (String) = normal - Font style value
+//
+// Style guide: utils.mixins.font-face
+@mixin font-face($font-name, $folder-name, $file-name, $font-weight: normal, $font-style: normal) {
+	@font-face {
+		font-family: $font-name;
+		src: url('#{$pathFont}#{$folder-name}/#{$fileName}.eot');
+		src: url('#{$pathFont}#{$folder-name}/#{$fileName}.eot?#iefix') format('embedded-opentype'),
+		url('#{$pathFont}#{$folder-name}/#{$fileName}.woff') format('woff'),
+		url('#{$pathFont}#{$folder-name}/#{$fileName}.ttf') format('truetype'),
+		url('#{$pathFont}#{$folder-name}/#{$fileName}.svg##{$font-name}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}

@@ -21,6 +21,16 @@
 @import "config/functions";
 
 
+// Utils
+//
+// Require util styles here.
+//
+// Style guide: utils
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/extends";
+
+
 // Base
 //
 // Require global styling here.
