@@ -14,10 +14,10 @@ export default [
   {
     path: '/home',
     name: 'home.index',
-    component: require('./pages/home/index.vue'),
+    component: require('./pages/home/index.vue')
   },
   {
     path: '/*',
-    redirect: '/home',
-  },
-];
+    redirect: '/home'
+  }
+]

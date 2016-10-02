@@ -10,8 +10,8 @@
    *
    * The entry point of the application
    */
-  import store from './store';
-  import { router } from './../bootstrap';
+  import store from './store'
+  import { router } from './../bootstrap'
 
   export default {
     /**
@@ -25,7 +25,7 @@
     /**
      * Fires when the app has been mounted
      */
-    mounted() {
-    },
-  };
+    mounted () {
+    }
+  }
 </script>

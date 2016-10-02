@@ -5,7 +5,6 @@
  * Will configure and bootstrap the application
  */
 
-
 /* ============
  * Vue
  * ============
@@ -15,10 +14,9 @@
  *
  * http://rc.vuejs.org/guide/
  */
-import Vue from 'vue';
+import Vue from 'vue'
 
-Vue.config.debug = process.env.NODE_ENV !== 'production';
-
+Vue.config.debug = process.env.NODE_ENV !== 'production'
 
 /* ============
  * Vue Resource
@@ -29,13 +27,12 @@ Vue.config.debug = process.env.NODE_ENV !== 'production';
  *
  * https://github.com/vuejs/vue-resource/tree/master/docs
  */
-import VueResource from 'vue-resource';
+import VueResource from 'vue-resource'
 
-Vue.use(VueResource);
+Vue.use(VueResource)
 
-Vue.http.headers.common.Accept = 'application/json';
-Vue.http.options.root = process.env.API_LOCATION;
-
+Vue.http.headers.common.Accept = 'application/json'
+Vue.http.options.root = process.env.API_LOCATION
 
 /* ============
  * Vuex Router Sync
@@ -45,9 +42,8 @@ Vue.http.options.root = process.env.API_LOCATION;
  *
  * https://github.com/vuejs/vuex-router-sync/blob/master/README.md
  */
-import VuexRouterSync from 'vuex-router-sync';
-import store from './app/store';
-
+import VuexRouterSync from 'vuex-router-sync'
+import store from './app/store'
 
 /* ============
  * Vue Router
@@ -58,18 +54,18 @@ import store from './app/store';
  *
  * http://router.vuejs.org/en/index.html
  */
-import VueRouter from 'vue-router';
-import routes from './app/routes';
+import VueRouter from 'vue-router'
+import routes from './app/routes'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 export const router = new VueRouter({
-  routes,
-});
-VuexRouterSync.sync(store, router);
+  routes
+})
 
-Vue.router = router;
+VuexRouterSync.sync(store, router)
 
+Vue.router = router
 
 /* ============
  * Styling
@@ -80,8 +76,8 @@ Vue.router = router;
  * install the desired Webpack loader.
  * Require the entrypoint here.
  */
-require('./assets/sass/app.scss');
+require('./assets/sass/app.scss')
 
 export default {
-  router,
-};
+  router
+}
