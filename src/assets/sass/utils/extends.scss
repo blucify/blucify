@@ -1,0 +1,117 @@
+// Extends
+//
+// Pre defined extends
+//
+// Style guide: utils.extends
+
+
+// transform-center
+//
+// Absolute element. Positioned in center horizontally and vertically.
+//
+// Style guide: utils.extends.transform-center
+%transform-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// force-hardware
+//
+// Sets transform and backface-visiblity which forces hardware acceleration.
+//
+// Style guide: utils.extends.force-hardware
+%force-hardware {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+
+// clearfix
+//
+// Clearfix, For clearing floats like a boss. See http://h5bp.com/q
+//
+// Style guide: utils.extends.clearfix
+%clearfix {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+		line-height: 0;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+
+// reset-bmp
+//
+// Resets border, margin and padding
+//
+// Style guide: utils.extends.reset-bmp
+%reset-bmp {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+
+// reset-list
+//
+// Reset ul element. Removes list-style and extends %reset-bmp.
+//
+// Style guide: utils.extends.reset-list
+%reset-list {
+	@extend %reset-bmp;
+	list-style: none;
+}
+
+
+// reset-input
+//
+// Remove all default browser input styles.
+//
+// Style guide: utils.extends.reset-input
+%reset-input {
+	display: inline-block;
+	border: 0;
+	padding: 0;
+	background: none;
+	-webkit-appearance: none;
+
+	&:focus { outline: 0; }
+
+	&::-moz-focus-inner,
+	&[type=reset]::-moz-focus-inner,
+	&[type=button]::-moz-focus-inner,
+	&[type=submit]::-moz-focus-inner,
+	&::-moz-focus-inner,
+	&[type=file] > [type=button]::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+
+// unstyled-link
+//
+// A link that looks and acts like the text it is contained within.
+//
+// Style guide: utils.extends.unstyled-link
+%unstyled-link {
+	color: inherit;
+	text-decoration: inherit;
+	cursor: inherit;
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}

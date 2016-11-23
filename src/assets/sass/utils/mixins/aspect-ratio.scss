@@ -1,0 +1,26 @@
+// aspect-ratio
+//
+// Maintain Aspect Ratio Mixin. The mixin assumes you'll be nesting an element with the class of content inside your initial block.
+//
+// $width (Number) = 16 - Horizontal aspect ratio
+// $height (Number) = 9 - Vertical aspect ratio
+//
+// Style guide: utils.mixins.aspect-ratio
+@mixin aspect-ratio($width: 16, $height: 9) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

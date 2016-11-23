@@ -1,0 +1,38 @@
+// respond-to (breakpoint)
+//
+// Media query helper. Helps you to have consistent breakpoints.
+//
+// 'x-small' - (max-width: 480px)
+// 'small' - (max-width: 768px)
+// 'medium' - (max-width: 1024px)
+// 'large' - (min-width: 1025px)
+// 'x-large' - (min-width: 1480px)
+// 'xx-large' - (min-width: 1680px)
+// 'from-x-small' - (min-width: 481px)
+// 'from-small' - (min-width: 769px)
+// 'from-medium' - (min-width: 1025px)
+//
+// Style guide: utils.functions.respond-to
+
+$media-queries: (
+  // Desktop first
+  'x-small': '(max-width: 480px)',
+  'small': '(max-width: 768px)',
+  'medium': '(max-width: 1024px)',
+  'large': '(min-width: 1025px)',
+  'x-large': '(min-width: 1480px)',
+  'xx-large': '(min-width: 1680px)',
+
+  // Mobile first
+  'from-x-small': '(min-width: 481px)',
+  'from-small': '(min-width: 769px)',
+  'from-medium': '(min-width: 1025px)',
+);
+
+@mixin respond-to($name) {
+	@if map-has-key($media-queries, $name) {
+		@media #{map-get($media-queries, $name)} {
+			@content;
+		}
+	}
+}

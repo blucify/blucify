@@ -3,7 +3,7 @@
   //
   // Home page
   //
-  // Style guide: pages
+  // Style guide: Pages.home
   @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);
 
   html, body {
